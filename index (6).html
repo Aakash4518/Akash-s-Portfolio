@@ -1,0 +1,1021 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akash Kumar Singh | Software Engineer & Full Stack Developer</title>
+<meta name="description" content="Akash Kumar Singh is a B.Tech CSE 2026 fresher focused on Full Stack Development, Java DSA, MERN stack, REST APIs, JWT authentication, and backend engineering.">
+<meta name="keywords" content="Akash Kumar Singh, Software Developer, Full Stack Developer, MERN Stack Developer, Java, React, Node.js, Express, MongoDB, DSA">
+<meta name="author" content="Akash Kumar Singh">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Akash Kumar Singh | Full Stack Developer">
+<meta property="og:description" content="Software Engineer | Full Stack Developer | Java + MERN Stack">
+<meta property="og:image" content="assets/portfolio-preview.png">
+<meta property="og:url" content="https://aakash4518.github.io/portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Akash Kumar Singh | Full Stack Developer">
+<meta name="twitter:description" content="B.Tech CSE 2026 fresher building MERN apps, REST APIs, JWT auth systems, and Java DSA depth.">
+<meta name="twitter:image" content="assets/portfolio-preview.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0A0E17',
+          panel: '#111726',
+          panel2: '#161D2E',
+          teal: '#2DD4BF',
+          amber: '#F5A623',
+          violet: '#8B7CF6',
+        },
+        fontFamily: {
+          display: ['Space Grotesk', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['JetBrains Mono', 'monospace'],
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  :root{
+    --ink:#0A0E17; --panel:#111726cc; --panel-solid:#111726; --panel2:#161D2E;
+    --border: rgba(255,255,255,0.09); --text:#E7EAF0; --muted:#8891A3;
+    --teal:#2DD4BF; --amber:#F5A623; --violet:#8B7CF6;
+    --grad: linear-gradient(120deg, var(--teal), var(--violet));
+  }
+  html.light{
+    --ink:#F5F6F8; --panel:#ffffffcc; --panel-solid:#ffffff; --panel2:#EEF0F4;
+    --border: rgba(10,14,23,0.09); --text:#0D1220; --muted:#5B6272;
+    --teal:#0E9E8E; --amber:#C97A11; --violet:#6E5CE0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink); color:var(--text);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    transition: background .35s ease, color .35s ease;
+    overflow-x:hidden;
+  }
+  ::selection{ background:var(--teal); color:#04140f; }
+  .font-display{font-family:'Space Grotesk',sans-serif;}
+  .font-mono{font-family:'JetBrains Mono',monospace;}
+
+  /* scrollbar */
+  ::-webkit-scrollbar{width:10px;}
+  ::-webkit-scrollbar-track{background:transparent;}
+  ::-webkit-scrollbar-thumb{background:var(--panel2); border-radius:8px;}
+
+  /* glass */
+  .glass{
+    background:var(--panel);
+    border:1px solid var(--border);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .card{
+    background:var(--panel);
+    border:1px solid var(--border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s ease, box-shadow .35s ease;
+  }
+  .card:hover{
+    transform: translateY(-6px);
+    border-color: color-mix(in srgb, var(--teal) 45%, var(--border));
+    box-shadow: 0 20px 40px -20px rgba(45,212,191,.25);
+  }
+
+  .grad-text{
+    background: linear-gradient(120deg, var(--teal), var(--violet) 60%, var(--amber));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace; font-size:.78rem; letter-spacing:.03em;
+    color:var(--teal); display:inline-flex; align-items:center; gap:.5rem;
+  }
+  .eyebrow::before{ content:'//'; color:var(--muted); }
+
+  /* nav link underline */
+  .nav-link{ position:relative; color:var(--muted); font-size:.92rem; }
+  .nav-link::after{
+    content:''; position:absolute; left:0; bottom:-6px; width:0%; height:2px;
+    background:var(--grad); transition: width .3s ease;
+  }
+  .nav-link:hover, .nav-link.active{ color:var(--text); }
+  .nav-link:hover::after, .nav-link.active::after{ width:100%; }
+
+  /* buttons */
+  .btn-primary{
+    background: var(--grad); color:#04140f; font-weight:600;
+    padding:.75rem 1.5rem; border-radius:.7rem; display:inline-flex; align-items:center; gap:.5rem;
+    transition: transform .25s ease, box-shadow .25s ease; box-shadow: 0 10px 25px -10px rgba(45,212,191,.5);
+  }
+  html.light .btn-primary{ color:#fff; }
+  .btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 16px 30px -10px rgba(45,212,191,.6); }
+  .btn-ghost{
+    border:1px solid var(--border); color:var(--text); padding:.75rem 1.5rem; border-radius:.7rem;
+    display:inline-flex; align-items:center; gap:.5rem; transition: all .25s ease; font-weight:500;
+  }
+  .btn-ghost:hover{ border-color:var(--teal); color:var(--teal); transform: translateY(-3px); }
+
+  /* terminal */
+  .terminal{
+    background: var(--panel-solid); border:1px solid var(--border); border-radius:1rem;
+    box-shadow: 0 40px 80px -40px rgba(0,0,0,.6);
+    overflow:hidden;
+  }
+  .terminal-head{
+    background:var(--panel2); padding:.7rem 1rem; display:flex; align-items:center; gap:.5rem;
+    border-bottom:1px solid var(--border);
+  }
+  .dot{width:11px;height:11px;border-radius:50%;}
+  .caret{ display:inline-block; width:8px; height:1.1em; background:var(--teal); vertical-align:middle; margin-left:2px; animation: blink 1s steps(1) infinite; }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  /* reveal on scroll */
+  .reveal{ opacity:0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in-view{ opacity:1; transform:none; }
+
+  /* floating */
+  @keyframes float{ 0%,100%{ transform: translateY(0px);} 50%{ transform: translateY(-14px);} }
+  .float{ animation: float 6s ease-in-out infinite; }
+  .float-slow{ animation: float 9s ease-in-out infinite; }
+
+  /* timeline */
+  .tl-line{ background: linear-gradient(180deg, var(--teal), transparent); }
+  .tl-dot{ box-shadow: 0 0 0 4px var(--ink), 0 0 20px rgba(45,212,191,.6); }
+  html.light .tl-dot{ box-shadow: 0 0 0 4px var(--ink), 0 0 20px rgba(14,158,142,.4); }
+
+  /* skill icon tile */
+  .skill-tile{ width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; background:var(--panel2); border:1px solid var(--border); }
+  .skill-tile img{ width:28px; height:28px; }
+
+  /* progress bar */
+  .bar-track{ height:6px; border-radius:99px; background:var(--panel2); overflow:hidden; }
+  .bar-fill{ height:100%; border-radius:99px; background: var(--grad); width:0%; transition: width 1.4s cubic-bezier(.2,.8,.2,1); }
+
+  canvas#net{ position:absolute; inset:0; width:100%; height:100%; }
+
+  .noise-grid{
+    background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at 50% 20%, black, transparent 70%);
+  }
+
+  .chip{ font-family:'JetBrains Mono',monospace; font-size:.72rem; padding:.28rem .6rem; border-radius:.5rem; border:1px solid var(--border); color:var(--muted); }
+
+  .marquee-track{ display:flex; gap:2.5rem; animation: scroll-x 26s linear infinite; }
+  @keyframes scroll-x{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior:auto !important;}
+  }
+
+  .proof-badge{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .7rem;border:1px solid var(--border);border-radius:.65rem;background:color-mix(in srgb, var(--panel-solid) 72%, transparent);font-size:.78rem;color:var(--muted);}
+  .stat-card{border:1px solid var(--border);border-radius:1rem;padding:1rem;background:color-mix(in srgb, var(--panel-solid) 82%, transparent);}
+  .project-shot{border:1px solid var(--border);border-radius:.9rem;overflow:hidden;background:var(--panel-solid);}
+  .project-shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+  .form-field{width:100%;border:1px solid var(--border);border-radius:.8rem;background:var(--panel-solid);color:var(--text);padding:.85rem 1rem;outline:none;transition:border-color .25s ease, box-shadow .25s ease;}
+  .form-field:focus{border-color:var(--teal);box-shadow:0 0 0 4px color-mix(in srgb, var(--teal) 14%, transparent);}
+  textarea.form-field{min-height:140px;resize:vertical;}
+  .brand-mark{display:inline-flex;align-items:center;gap:.7rem;color:var(--text);}
+  .brand-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--teal),var(--violet));color:#04140f;box-shadow:0 12px 24px -14px rgba(45,212,191,.8);}
+  html.light .brand-icon{color:#fff;}
+  .brand-word{line-height:1;}
+  .hero-visual{position:relative;max-width:440px;margin-inline:auto;display:grid;gap:1.5rem;}
+  .profile-card{position:relative;overflow:hidden;border-radius:1.75rem;border:1px solid var(--border);background:var(--panel-solid);box-shadow:0 45px 110px -55px rgba(0,0,0,.7);}
+  .profile-card img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center center;display:block;}
+  .profile-chip{position:absolute;left:1.25rem;right:1.25rem;bottom:-1rem;border:1px solid var(--border);border-radius:1.25rem;background:color-mix(in srgb, var(--panel-solid) 92%, transparent);backdrop-filter:blur(16px);padding:1.1rem;box-shadow:0 20px 40px -20px rgba(0,0,0,.25);}
+  .mini-terminal{position:relative;right:auto;top:auto;width:100%;max-width:380px;margin:0 auto;}
+  .social-card{min-height:104px;align-items:center;justify-content:center;text-align:center;}
+  .social-icon{width:32px;height:32px;display:grid;place-items:center;color:var(--teal);}
+  input:focus-visible, button:focus-visible, a:focus-visible{ outline: 2px solid var(--teal); outline-offset:3px; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ================= NAV ================= -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="mt-3 glass rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between">
+      <a href="#home" class="brand-mark font-mono font-bold text-lg">
+        <span class="brand-icon">
+          <span class="font-display text-sm tracking-[0.2em]">AK</span>
+        </span>
+        <span class="brand-word">
+          <span class="block text-[0.72rem] uppercase tracking-[0.32em]" style="color:var(--muted)">Portfolio</span>
+          <span class="grad-text text-base leading-none">Akash</span>
+        </span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7 font-body">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#stack" class="nav-link">Stack</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#github" class="nav-link">GitHub</a>
+        <a href="#dsa" class="nav-link">DSA</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2 md:gap-3">
+        <button id="themeToggle" aria-label="Toggle theme" class="skill-tile !w-10 !h-10 !rounded-xl">
+          <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="var(--violet)"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+        <a href="assets/Akash_Kumar_Singh_Resume.pdf" download class="btn-primary hidden md:inline-flex !py-2 !px-4 text-sm">
+          Resume
+        </a>
+        <button id="menuBtn" class="lg:hidden skill-tile !w-10 !h-10 !rounded-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="hidden glass rounded-2xl mt-2 px-6 py-5 flex flex-col gap-4 font-body">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#stack" class="nav-link">Stack</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#github" class="nav-link">GitHub</a>
+      <a href="#dsa" class="nav-link">DSA</a>
+      <a href="#resume" class="nav-link">Resume</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="relative min-h-screen flex items-center pt-32 pb-16 overflow-hidden">
+  <div class="absolute inset-0 noise-grid"></div>
+  <canvas id="net" class="opacity-60"></canvas>
+  <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full blur-3xl opacity-20 float-slow" style="background:var(--teal)"></div>
+  <div class="absolute top-40 -right-24 w-96 h-96 rounded-full blur-3xl opacity-20 float" style="background:var(--violet)"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-14 items-center w-full">
+    <div>
+      <div class="eyebrow mb-5">akash@dev:~$ status --available-for-hire</div>
+      <h1 class="font-display font-bold text-[2.6rem] leading-[1.05] sm:text-6xl">
+        Hi, I'm <span class="grad-text">Akash Kumar Singh</span>
+      </h1>
+      <p class="mt-4 font-mono text-sm sm:text-base" style="color:var(--teal)">Software Engineer | Full Stack Developer | Java + MERN Stack</p>
+      <div class="mt-4 font-mono text-lg sm:text-2xl h-9 flex items-center">
+        <span style="color:var(--muted)">&gt;&nbsp;</span><span id="typed" class="text-teal-300" style="color:var(--teal)"></span><span class="caret"></span>
+      </div>
+      <p class="mt-6 max-w-xl font-body" style="color:var(--muted)">
+        B.Tech CSE 2026 fresher building full-stack web applications with React, Node.js, Express, MongoDB and Java problem-solving. I enjoy backend APIs, authentication flows, clean dashboards and systems that are simple for users to trust.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#projects" class="btn-primary">
+          View Projects
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="assets/Akash_Kumar_Singh_Resume.pdf" download class="btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+          Download Resume
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6l9 7 9-7M3 6h18v12H3V6z"/></svg>
+          Contact Me
+        </a>
+      </div>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <span class="proof-badge"><span style="color:var(--teal)">✓</span>350+ DSA Problems</span>
+        <span class="proof-badge"><span style="color:var(--teal)">✓</span>20+ GitHub Repositories</span>
+        <span class="proof-badge"><span style="color:var(--teal)">✓</span>2 Internships</span>
+      </div>
+      <div class="mt-9 flex items-center gap-4">
+        <a href="https://github.com/Aakash4518" target="_blank" rel="noopener" class="skill-tile hover:!border-teal-400 transition" aria-label="GitHub" style="border-color:transparent">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.86 3.16 8.98 7.55 10.44.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.05-3.07.67-3.72-1.3-3.72-1.3-.5-1.28-1.23-1.62-1.23-1.62-1-.7.08-.68.08-.68 1.1.08 1.68 1.14 1.68 1.14.98 1.68 2.58 1.2 3.2.91.1-.7.38-1.2.7-1.48-2.45-.28-5.02-1.23-5.02-5.46 0-1.2.43-2.19 1.14-2.96-.11-.28-.5-1.42.11-2.95 0 0 .93-.3 3.05 1.13a10.6 10.6 0 015.56 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.53.22 2.67.11 2.95.71.77 1.14 1.76 1.14 2.96 0 4.24-2.58 5.17-5.04 5.44.4.34.74 1.01.74 2.04 0 1.47-.01 2.66-.01 3.02 0 .29.2.63.76.52a11.03 11.03 0 007.53-10.44C23.02 5.24 18.27.5 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/aakassingh/" target="_blank" rel="noopener" class="skill-tile hover:!border-teal-400 transition" aria-label="LinkedIn" style="border-color:transparent">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+        </a>
+        <a href="https://leetcode.com/u/Akash1845/" target="_blank" rel="noopener" class="skill-tile hover:!border-teal-400 transition font-mono font-bold text-xs" aria-label="LeetCode" style="border-color:transparent">LC</a>
+        <a href="https://www.geeksforgeeks.org/profile/akashiniruw" target="_blank" rel="noopener" class="skill-tile hover:!border-teal-400 transition font-mono font-bold text-xs" aria-label="GeeksforGeeks" style="border-color:transparent">Gf</a>
+        <a href="mailto:akashkrsingh369@gmail.com" class="skill-tile hover:!border-teal-400 transition" aria-label="Email" style="border-color:transparent">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 6l9 7 9-7M3 6h18v12H3V6z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="relative reveal hero-visual">
+      <div class="profile-card max-w-md mx-auto">
+        <img src="assets/profile.jpg" alt="Akash Kumar Singh" loading="lazy">
+        <div class="profile-chip">
+          <p class="font-mono text-[11px] uppercase tracking-[0.25em]" style="color:var(--teal)">Open to roles</p>
+          <p class="font-display font-semibold mt-1">Software Engineer • Full Stack • Java</p>
+        </div>
+      </div>
+      <div class="mini-terminal glass rounded-2xl p-3 hidden md:block">
+        <p class="font-mono text-[11px]" style="color:var(--muted)">focus / current</p>
+        <p class="font-display font-semibold mt-1 text-sm">MERN • REST APIs • JWT</p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="chip">React</span>
+          <span class="chip">Node</span>
+          <span class="chip">MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 font-mono text-xs flex flex-col items-center gap-2" style="color:var(--muted)">
+    scroll
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </a>
+</section>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-28 relative">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="eyebrow reveal">akash@dev:~/about$ cat summary.md</div>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3 reveal">Focused on <span class="grad-text">full-stack engineering.</span></h2>
+
+    <div class="mt-14 grid lg:grid-cols-5 gap-12">
+      <div class="lg:col-span-3 space-y-5 reveal font-body" style="color:var(--muted)">
+        <p>
+          I am a <strong style="color:var(--text)">B.Tech Computer Science & Engineering student graduating in 2026</strong> from Ajay Kumar Garg Engineering College, focused on Software Developer and Full Stack Developer roles.
+        </p>
+        <p>
+          My strongest work is in <strong style="color:var(--text)">MERN stack development</strong>: React interfaces, Node.js/Express APIs, MongoDB schemas, JWT authentication, role-based access, and responsive dashboards. I like building backend flows that are clear, secure, and easy to extend.
+        </p>
+        <p>
+          Alongside projects, I solve DSA problems in <strong style="color:var(--text)">Java</strong> to strengthen fundamentals across arrays, trees, dynamic programming, graphs, SQL, OOP, DBMS, OS, and computer networks.
+        </p>
+      </div>
+
+      <div class="lg:col-span-2 space-y-5 reveal">
+        <div class="card rounded-2xl p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="font-display font-semibold">B.Tech, Computer Science & Engineering</p>
+              <p class="text-sm mt-1" style="color:var(--muted)">Ajay Kumar Garg Engineering College, Ghaziabad</p>
+            </div>
+            <span class="chip whitespace-nowrap">2023 - 2026</span>
+          </div>
+          <div class="mt-4">
+            <div class="flex justify-between text-xs font-mono mb-1" style="color:var(--muted)"><span>GPA</span><span>7.68 / 10</span></div>
+            <div class="bar-track"><div class="bar-fill" data-fill="76.8"></div></div>
+          </div>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <p class="font-display font-semibold">Current Focus</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="chip">Java DSA</span><span class="chip">MERN Stack</span><span class="chip">REST APIs</span><span class="chip">JWT Auth</span><span class="chip">Backend Design</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div class="card rounded-2xl p-4 text-center">
+            <p class="font-display font-bold text-2xl grad-text" data-counter="20">0</p>
+            <p class="text-xs mt-1" style="color:var(--muted)">Repositories</p>
+          </div>
+          <div class="card rounded-2xl p-4 text-center">
+            <p class="font-display font-bold text-2xl grad-text" data-counter="350">0</p>
+            <p class="text-xs mt-1" style="color:var(--muted)">DSA solved</p>
+          </div>
+          <div class="card rounded-2xl p-4 text-center">
+            <p class="font-display font-bold text-2xl grad-text" data-counter="2">0</p>
+            <p class="text-xs mt-1" style="color:var(--muted)">Internships</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= SKILLS / STACK ================= -->
+<section id="stack" class="py-28 relative" style="background:var(--panel2)">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="eyebrow reveal">akash@dev:~/stack$ ls -la</div>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3 reveal">The toolbox I build with.</h2>
+
+    <div id="stackGrid" class="mt-14 grid md:grid-cols-2 gap-6"></div>
+
+    <div class="mt-10 card rounded-2xl p-6 reveal">
+      <p class="eyebrow mb-3" style="margin-left:0">core_cs.h</p>
+      <div class="flex flex-wrap gap-3">
+        <span class="chip">DSA</span>
+        <span class="chip">OOP</span>
+        <span class="chip">DBMS</span>
+        <span class="chip">OS</span>
+        <span class="chip">CN</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="py-28 relative">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="eyebrow reveal">akash@dev:~/experience$ git log --oneline</div>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3 reveal">Where I've worked.</h2>
+
+    <div class="mt-16 relative pl-8 md:pl-0">
+      <div class="absolute left-[7px] md:left-1/2 top-0 bottom-0 w-[2px] tl-line"></div>
+
+      <div class="relative md:grid md:grid-cols-2 md:gap-12 mb-14 reveal">
+        <span class="absolute left-0 md:left-1/2 top-1 -translate-x-1/2 w-3 h-3 rounded-full tl-dot" style="background:var(--teal)"></span>
+        <div class="md:text-right md:pr-12">
+          <p class="font-mono text-xs" style="color:var(--muted)">Jun 2025 - Sep 2025</p>
+          <h3 class="font-display font-semibold text-xl mt-1">Full Stack Development Intern</h3>
+          <p style="color:var(--teal)" class="font-medium">Zidio Development - Remote</p>
+        </div>
+        <div class="md:pl-12 mt-4 md:mt-0">
+          <div class="card rounded-2xl p-6">
+            <ul class="space-y-2 text-sm" style="color:var(--muted)">
+              <li>- Built MERN stack features with React, Node.js, Express, MongoDB, responsive UI, and reusable components.</li>
+              <li>- Implemented CRUD workflows, REST API integrations, JWT authentication, protected routes, and role-aware access.</li>
+              <li>- Designed MongoDB schemas, validation flows, middleware, and centralized API error handling for cleaner backend structure.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="chip">MongoDB</span><span class="chip">Express</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">JWT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative md:grid md:grid-cols-2 md:gap-12 reveal">
+        <span class="absolute left-0 md:left-1/2 top-1 -translate-x-1/2 w-3 h-3 rounded-full tl-dot" style="background:var(--amber)"></span>
+        <div class="md:order-2 md:pl-12">
+          <p class="font-mono text-xs" style="color:var(--muted)">Jul 2025 - Aug 2025</p>
+          <h3 class="font-display font-semibold text-xl mt-1">AI & Cloud Intern</h3>
+          <p style="color:var(--amber)" class="font-medium">IBM SkillsBuild - Edunet Foundation / AICTE</p>
+        </div>
+        <div class="md:order-1 md:pr-12 mt-4 md:mt-0">
+          <div class="card rounded-2xl p-6">
+            <ul class="space-y-2 text-sm" style="color:var(--muted)">
+              <li>- Built AI/ML workflows on IBM Cloud using AutoAI and Watsonx.ai for prediction and classification tasks.</li>
+              <li>- Trained a Crop Yield Prediction pipeline with Random Forest reaching <strong style="color:var(--text)">92% accuracy</strong>.</li>
+              <li>- Deployed an NSAP eligibility classifier for three pension categories with <strong style="color:var(--text)">94.8% accuracy</strong>.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="chip">IBM Cloud</span><span class="chip">Watsonx.ai</span><span class="chip">AutoAI</span><span class="chip">Machine Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="py-28 relative" style="background:var(--panel2)">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="eyebrow reveal">akash@dev:~/projects$ ls --featured</div>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3 reveal">Projects with recruiter signal.</h2>
+    <p class="mt-3 max-w-2xl reveal" style="color:var(--muted)">Featured builds show auth, dashboards, APIs, roles, and product thinking. Smaller projects show ML, APIs, and frontend fundamentals.</p>
+
+    <div class="mt-14 card rounded-2xl overflow-hidden reveal">
+      <div class="grid lg:grid-cols-2 gap-0">
+        <div class="p-5 grid gap-4">
+          <div class="project-shot aspect-video"><img src="assets/taskflow-auth.png" alt="TaskFlow Pro authentication flow" loading="lazy"></div>
+          <div class="project-shot aspect-video"><img src="assets/taskflow-dashboard.png" alt="TaskFlow Pro dashboard analytics" loading="lazy"></div>
+        </div>
+        <div class="p-8 md:p-10 flex flex-col">
+          <span class="chip w-fit mb-4">Featured - 01</span>
+          <h3 class="font-display font-bold text-2xl">TaskFlow Pro</h3>
+          <p class="mt-1 text-sm" style="color:var(--teal)">Full-stack Project Management SaaS</p>
+          <p class="mt-4 text-sm" style="color:var(--muted)">
+            A MERN project management platform with authentication, role-based access, project/task modules, dashboard KPIs, and a clean delivery workspace for teams.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-3 mt-5">
+            <div class="stat-card"><p class="font-display font-bold text-2xl grad-text">20+</p><p class="text-xs" style="color:var(--muted)">APIs</p></div>
+            <div class="stat-card"><p class="font-display font-bold text-2xl grad-text">3</p><p class="text-xs" style="color:var(--muted)">User Roles</p></div>
+            <div class="stat-card"><p class="font-display font-bold text-2xl grad-text">JWT</p><p class="text-xs" style="color:var(--muted)">Security</p></div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm" style="color:var(--muted)">
+            <li>- Authentication flow with login/register, protected routes, JWT middleware, and session-aware UI.</li>
+            <li>- Dashboard screenshot highlights project counts, pending tasks, completion state, activity feed, and task pipeline.</li>
+            <li>- API architecture: React/Tailwind frontend calls Express routes, controllers validate requests, Mongoose models persist users, projects, tasks, and role data in MongoDB.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">MongoDB</span><span class="chip">REST API</span><span class="chip">JWT</span><span class="chip">Tailwind CSS</span>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://github.com/Aakash4518/Project-Management-System" target="_blank" rel="noopener" class="btn-ghost text-sm !py-2">Code</a>
+            <a href="https://project-management-system-production-8ec3.up.railway.app/" target="_blank" rel="noopener" class="btn-primary text-sm !py-2">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 card rounded-2xl overflow-hidden reveal">
+      <div class="grid lg:grid-cols-2 gap-0">
+        <div class="p-8 md:p-10 flex flex-col lg:order-1">
+          <span class="chip w-fit mb-4">Featured - 02</span>
+          <h3 class="font-display font-bold text-2xl">RiverFlow</h3>
+          <p class="mt-1 text-sm" style="color:var(--amber)">StackOverflow-inspired Q&A Platform</p>
+          <p class="mt-4 text-sm" style="color:var(--muted)">
+            A developer community platform inspired by StackOverflow where users can ask questions, answer, vote, authenticate, and browse technical discussions.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5">
+            <div class="stat-card"><p class="font-display font-bold grad-text">Questions</p></div>
+            <div class="stat-card"><p class="font-display font-bold grad-text">Answers</p></div>
+            <div class="stat-card"><p class="font-display font-bold grad-text">Votes</p></div>
+            <div class="stat-card"><p class="font-display font-bold grad-text">Auth</p></div>
+          </div>
+          <ul class="mt-5 space-y-1.5 text-sm" style="color:var(--muted)">
+            <li>- Question listing, detail pages, answers, comments, tags, votes, and contributor views.</li>
+            <li>- Authentication and user sessions handled with Appwrite Auth and protected user actions.</li>
+            <li>- Next.js App Router structure with reusable components and dynamic routes for Q&A content.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="chip">Next.js</span><span class="chip">Appwrite</span><span class="chip">Tailwind CSS</span><span class="chip">JavaScript</span>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://github.com/Aakash4518/RiverFlow" target="_blank" rel="noopener" class="btn-ghost text-sm !py-2">Code</a>
+            <a href="https://riverflow-murex.vercel.app/" target="_blank" rel="noopener" class="btn-primary text-sm !py-2">Live Demo</a>
+          </div>
+        </div>
+        <div class="p-5 grid gap-4 lg:order-2">
+          <div class="project-shot aspect-video"><img src="assets/riverflow-landing.png" alt="RiverFlow landing page" loading="lazy"></div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="project-shot aspect-video"><img src="assets/riverflow-questions.png" alt="RiverFlow questions and votes" loading="lazy"></div>
+            <div class="project-shot aspect-video"><img src="assets/riverflow-answer.png" alt="RiverFlow answer view" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex items-end justify-between gap-6 flex-wrap reveal">
+      <div>
+        <h3 class="font-display font-bold text-2xl">Explore More Projects</h3>
+        <p class="mt-2 text-sm" style="color:var(--muted)">Four smaller builds that round out ML, API, and frontend practice.</p>
+      </div>
+      <a href="https://github.com/Aakash4518?tab=repositories" target="_blank" rel="noopener" class="btn-ghost text-sm !py-2">View GitHub Repos</a>
+    </div>
+
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card rounded-2xl p-6 reveal">
+        <h4 class="font-display font-semibold text-lg">Phishing URL Detection</h4>
+        <p class="mt-2 text-sm" style="color:var(--muted)">ML classifier for detecting phishing URLs using lexical and host-based signals.</p>
+        <div class="flex flex-wrap gap-2 mt-4"><span class="chip">Python</span><span class="chip">ML</span><span class="chip">Security</span></div>
+      </div>
+      <div class="card rounded-2xl p-6 reveal">
+        <h4 class="font-display font-semibold text-lg">Crop Prediction</h4>
+        <p class="mt-2 text-sm" style="color:var(--muted)">IBM AutoAI pipeline predicting crop yield from agricultural data with cloud deployment practice.</p>
+        <div class="flex flex-wrap gap-2 mt-4"><span class="chip">IBM Cloud</span><span class="chip">AutoAI</span><span class="chip">ML</span></div>
+      </div>
+      <div class="card rounded-2xl p-6 reveal">
+        <h4 class="font-display font-semibold text-lg">Weather App</h4>
+        <p class="mt-2 text-sm" style="color:var(--muted)">Responsive weather UI with API integration, search flow, and clean state handling.</p>
+        <div class="flex flex-wrap gap-2 mt-4"><span class="chip">JavaScript</span><span class="chip">API</span><span class="chip">CSS</span></div>
+      </div>
+      <div class="card rounded-2xl p-6 reveal">
+        <h4 class="font-display font-semibold text-lg">Portfolio</h4>
+        <p class="mt-2 text-sm" style="color:var(--muted)">This fast, responsive portfolio with SEO, project proof, GitHub stats, and contact flow.</p>
+        <div class="flex flex-wrap gap-2 mt-4"><span class="chip">HTML</span><span class="chip">Tailwind</span><span class="chip">SEO</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= GITHUB ================= -->
+<section id="github" class="py-28 relative">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="eyebrow reveal">akash@dev:~/github$ git fetch --stats</div>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3 reveal">GitHub activity.</h2>
+    <p class="mt-3 max-w-xl reveal" style="color:var(--muted)">Live GitHub cards plus pinned repositories recruiters can open first.</p>
+
+    <div class="mt-12 grid lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 card rounded-2xl p-6 reveal">
+        <p class="eyebrow mb-4" style="margin-left:0">public profile</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="stat-card">
+            <p class="font-display font-bold text-3xl grad-text">20+</p>
+            <p class="text-sm mt-1" style="color:var(--muted)">repositories shipped across web, API and ML builds</p>
+          </div>
+          <div class="stat-card">
+            <p class="font-display font-bold text-3xl grad-text">350+</p>
+            <p class="text-sm mt-1" style="color:var(--muted)">DSA problems solved with a strong Java practice streak</p>
+          </div>
+        </div>
+      </div>
+      <div class="card rounded-2xl p-6 reveal">
+        <p class="eyebrow mb-4" style="margin-left:0">recent focus</p>
+        <ul class="space-y-2 text-sm" style="color:var(--muted)">
+          <li>- Full-stack MERN apps with auth and role flows</li>
+          <li>- API design, dashboards, and production-style UI</li>
+          <li>- Java fundamentals, DSA revision, and interview prep</li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3 card rounded-2xl p-6 reveal">
+        <p class="eyebrow mb-4" style="margin-left:0">working style</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Express</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">JWT</span>
+          <span class="chip">Java</span>
+          <span class="chip">DSA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <a href="https://github.com/Aakash4518/Project-Management-System" target="_blank" rel="noopener" class="card rounded-2xl p-6 reveal block">
+        <p class="font-display font-semibold text-lg">TaskFlow Pro</p>
+        <p class="mt-2 text-sm" style="color:var(--muted)">MERN project management SaaS with JWT, roles, APIs, dashboard, and task workflows.</p>
+        <div class="flex flex-wrap gap-2 mt-4"><span class="chip">MERN</span><span class="chip">JWT</span><span class="chip">REST API</span></div>
+      </a>
+      <a href="https://github.com/Aakash4518/RiverFlow" target="_blank" rel="noopener" class="card rounded-2xl p-6 reveal block">
+        <p class="font-display font-semibold text-lg">RiverFlow</p>
+        <p class="mt-2 text-sm" style="color:var(--muted)">StackOverflow-inspired Q&A platform with questions, answers, votes, auth, and tags.</p>
+        <div class="flex flex-wrap gap-2 mt-4"><span class="chip">Next.js</span><span class="chip">Appwrite</span><span class="chip">Q&A</span></div>
+      </a>
+      <a href="https://github.com/Aakash4518?tab=repositories&q=phishing" target="_blank" rel="noopener" class="card rounded-2xl p-6 reveal block">
+        <p class="font-display font-semibold text-lg">Phishing Detector</p>
+        <p class="mt-2 text-sm" style="color:var(--muted)">Machine learning project for identifying suspicious and phishing URLs.</p>
+        <div class="flex flex-wrap gap-2 mt-4"><span class="chip">Python</span><span class="chip">ML</span><span class="chip">Security</span></div>
+      </a>
+    </div>
+
+    <div class="mt-8 text-center reveal">
+      <a href="https://github.com/Aakash4518" target="_blank" rel="noopener" class="btn-primary">@Aakash4518 on GitHub</a>
+    </div>
+  </div>
+</section>
+<!-- ================= DSA ================= -->
+<section id="dsa" class="py-28 relative" style="background:var(--panel2)">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="eyebrow reveal">akash@dev:~/dsa$ ./run_tests --all</div>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3 reveal">Java DSA practice.</h2>
+    <p class="mt-3 max-w-xl reveal" style="color:var(--muted)">Consistent problem-solving practice across core interview topics.</p>
+
+    <div class="mt-12 grid lg:grid-cols-[0.9fr_1.1fr] gap-6">
+      <div class="card rounded-2xl p-6 text-center reveal">
+        <p class="font-display font-bold text-5xl grad-text" data-counter="350">0</p>
+        <p class="text-sm mt-2" style="color:var(--muted)">Problems Solved</p>
+      </div>
+      <div class="card rounded-2xl p-6 reveal">
+        <p class="eyebrow mb-4" style="margin-left:0">topic counts</p>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="stat-card text-center"><p class="font-display font-semibold">Arrays</p><p class="text-sm mt-1" style="color:var(--muted)">120+</p></div>
+          <div class="stat-card text-center"><p class="font-display font-semibold">Dynamic Programming</p><p class="text-sm mt-1" style="color:var(--muted)">90+</p></div>
+          <div class="stat-card text-center"><p class="font-display font-semibold">Trees</p><p class="text-sm mt-1" style="color:var(--muted)">70+</p></div>
+          <div class="stat-card text-center"><p class="font-display font-semibold">Graphs</p><p class="text-sm mt-1" style="color:var(--muted)">60+</p></div>
+          <div class="stat-card text-center"><p class="font-display font-semibold">Strings</p><p class="text-sm mt-1" style="color:var(--muted)">55+</p></div>
+          <div class="stat-card text-center"><p class="font-display font-semibold">SQL</p><p class="text-sm mt-1" style="color:var(--muted)">45+</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 card rounded-2xl p-4 reveal overflow-hidden">
+      <img src="https://leetcard.jacoblin.cool/Akash1845?theme=dark&ext=heatmap" alt="LeetCode stats card" class="w-full" loading="lazy">
+    </div>
+
+    <div class="mt-6 flex flex-wrap gap-4 reveal">
+      <a href="https://leetcode.com/u/Akash1845/" target="_blank" rel="noopener" class="btn-ghost text-sm !py-2">LeetCode</a>
+      <a href="https://www.geeksforgeeks.org/profile/akashiniruw" target="_blank" rel="noopener" class="btn-ghost text-sm !py-2">GeeksforGeeks</a>
+      <a href="https://www.codechef.com/users/akashingh898?utm=codolio" target="_blank" rel="noopener" class="btn-ghost text-sm !py-2">CodeChef</a>
+      <a href="https://www.hackerrank.com/profile/akashingh898?utm=codolio" target="_blank" rel="noopener" class="btn-ghost text-sm !py-2">HackerRank</a>
+    </div>
+  </div>
+</section>
+<!-- ================= RESUME ================= -->
+<section id="resume" class="py-28 relative">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal">
+      <div class="eyebrow">akash@dev:~/resume$ ./export --format pdf</div>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3">Everything above, on one page.</h2>
+      <p class="mt-4" style="color:var(--muted)">
+        A recruiter-friendly, ATS-aligned PDF covering education, experience, projects, technical
+        skills and achievements - kept current with everything on this site.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="assets/Akash_Kumar_Singh_Resume.pdf" download class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+          Download PDF
+        </a>
+        <a href="assets/Akash_Kumar_Singh_Resume.pdf" target="_blank" rel="noopener" class="btn-ghost">
+          Open in new tab
+        </a>
+      </div>
+      <ul class="mt-8 space-y-2 text-sm" style="color:var(--muted)">
+        <li>- Updated for full-stack &amp; MERN roles</li>
+        <li>- Includes GitHub, LinkedIn, LeetCode, GeeksforGeeks, CodeChef &amp; HackerRank links</li>
+        <li>- One page, ATS-friendly formatting</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <div class="card rounded-2xl overflow-hidden" style="height:560px">
+        <iframe src="assets/Akash_Kumar_Singh_Resume.pdf" class="w-full h-full" title="Resume preview"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-28 relative" style="background:var(--panel2)">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center">
+      <div class="eyebrow justify-center reveal">akash@dev:~$ echo "let's talk"</div>
+      <h2 class="font-display font-bold text-3xl sm:text-5xl mt-3 reveal">Let's build something <span class="grad-text">real</span>.</h2>
+      <p class="mt-4 max-w-xl mx-auto reveal" style="color:var(--muted)">
+        Open to Software Developer, Full Stack Developer, and MERN stack fresher roles. Send a message and I will get back quickly.
+      </p>
+    </div>
+
+    <div class="mt-12 grid lg:grid-cols-5 gap-8 items-start">
+      <form id="contactForm" class="lg:col-span-3 card rounded-2xl p-6 md:p-8 reveal text-left">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block text-sm font-medium">Name
+            <input class="form-field mt-2" type="text" name="from_name" autocomplete="name" required>
+          </label>
+          <label class="block text-sm font-medium">Email
+            <input class="form-field mt-2" type="email" name="reply_to" autocomplete="email" required>
+          </label>
+        </div>
+        <label class="block text-sm font-medium mt-4">Message
+          <textarea class="form-field mt-2" name="message" required></textarea>
+        </label>
+        <div class="mt-5 flex flex-wrap items-center gap-4">
+          <button type="submit" class="btn-primary">Send Message</button>
+          <p id="formStatus" class="text-sm" style="color:var(--muted)">EmailJS ready after adding your service keys.</p>
+        </div>
+      </form>
+
+      <div class="lg:col-span-2 reveal">
+        <button id="copyEmail" class="glass rounded-2xl px-6 py-4 w-full inline-flex items-center justify-center gap-3 font-mono text-sm hover:!border-teal-400 transition" style="border:1px solid var(--border)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M3 6l9 7 9-7M3 6h18v12H3V6z"/></svg>
+          akashkrsingh369@gmail.com
+          <span id="copyLabel" style="color:var(--muted)">- copy</span>
+        </button>
+
+        <div class="mt-6 grid grid-cols-2 gap-4">
+          <a href="https://github.com/Aakash4518" target="_blank" rel="noopener" class="card rounded-2xl p-5 flex flex-col items-center gap-2">
+            <span class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.86 3.16 8.98 7.55 10.44.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.05-3.07.67-3.72-1.3-3.72-1.3-.5-1.28-1.23-1.62-1.23-1.62-1-.7.08-.68.08-.68 1.1.08 1.68 1.14 1.68 1.14.98 1.68 2.58 1.2 3.2.91.1-.7.38-1.2.7-1.48-2.45-.28-5.02-1.23-5.02-5.46 0-1.2.43-2.19 1.14-2.96-.11-.28-.5-1.42.11-2.95 0 0 .93-.3 3.05 1.13a10.6 10.6 0 015.56 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.53.22 2.67.11 2.95.71.77 1.14 1.76 1.14 2.96 0 4.24-2.58 5.17-5.04 5.44.4.34.74 1.01.74 2.04 0 1.47-.01 2.66-.01 3.02 0 .29.2.63.76.52a11.03 11.03 0 007.53-10.44C23.02 5.24 18.27.5 12 .5z"/></svg></span>
+            <span class="text-xs font-medium">GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/aakassingh/" target="_blank" rel="noopener" class="card rounded-2xl p-5 flex flex-col items-center gap-2">
+            <span class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg></span>
+            <span class="text-xs font-medium">LinkedIn</span>
+          </a>
+          <a href="https://leetcode.com/u/Akash1845/" target="_blank" rel="noopener" class="card rounded-2xl p-5 flex flex-col items-center gap-2">
+            <span class="social-icon font-mono font-bold">LC</span>
+            <span class="text-xs font-medium">LeetCode</span>
+          </a>
+          <a href="https://www.hackerrank.com/profile/akashingh898?utm=codolio" target="_blank" rel="noopener" class="card rounded-2xl p-5 flex flex-col items-center gap-2">
+            <span class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4h8v4H8zM8 10h8v4H8zM8 16h8v4H8z"/></svg></span>
+            <span class="text-xs font-medium">HackerRank</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="py-8 text-center font-mono text-xs" style="color:var(--muted)">
+  &copy; <span id="year"></span> Akash Kumar Singh - built with HTML, Tailwind &amp; a bit of terminal nostalgia.
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // ---------- theme (in-memory, respects OS preference, no storage) ----------
+  const root = document.documentElement;
+  const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+  if (prefersLight) root.classList.add('light');
+  function syncThemeIcons(){
+    const isLight = root.classList.contains('light');
+    document.getElementById('iconSun').classList.toggle('hidden', isLight);
+    document.getElementById('iconMoon').classList.toggle('hidden', !isLight);
+  }
+  syncThemeIcons();
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    root.classList.toggle('light');
+    syncThemeIcons();
+  });
+
+  // ---------- mobile menu ----------
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  // ---------- active nav link on scroll ----------
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  sections.forEach(s => spy.observe(s));
+
+  // ---------- reveal on scroll ----------
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in-view'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // ---------- animated bars ----------
+  const bars = document.querySelectorAll('.bar-fill');
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        e.target.style.width = e.target.dataset.fill + '%';
+        barObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  bars.forEach(b => barObserver.observe(b));
+
+  // ---------- counters ----------
+  document.querySelectorAll('[data-counter]').forEach(el => {
+    const target = parseInt(el.dataset.counter, 10);
+    const counterObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          let cur = 0; const step = Math.max(1, Math.round(target / 40));
+          const t = setInterval(() => {
+            cur += step;
+            if(cur >= target){ cur = target; clearInterval(t); }
+            el.textContent = cur + (target >= 100 ? '+' : '');
+          }, 30);
+          counterObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.4 });
+    counterObs.observe(el);
+  });
+
+  // ---------- typed role rotator ----------
+  const roles = ["Software Developer", "Full Stack Developer", "MERN Stack Developer", "Java Problem Solver"];
+  const typedEl = document.getElementById('typed');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let ri = 0, ci = 0, deleting = false;
+  function typeLoop(){
+    const word = roles[ri];
+    if(!deleting){
+      ci++;
+      typedEl.textContent = word.slice(0, ci);
+      if(ci === word.length){ deleting = true; setTimeout(typeLoop, 1600); return; }
+    } else {
+      ci--;
+      typedEl.textContent = word.slice(0, ci);
+      if(ci === 0){ deleting = false; ri = (ri + 1) % roles.length; }
+    }
+    setTimeout(typeLoop, deleting ? 35 : 70);
+  }
+  if(reduceMotion){ typedEl.textContent = roles[0]; } else { typeLoop(); }
+
+    // ---------- copy email ----------
+  document.getElementById('copyEmail').addEventListener('click', async () => {
+    try{
+      await navigator.clipboard.writeText('akashkrsingh369@gmail.com');
+      document.getElementById('copyLabel').textContent = '- copied';
+      setTimeout(() => document.getElementById('copyLabel').textContent = '- copy', 1800);
+    }catch(e){ /* clipboard may be blocked; ignore silently */ }
+  });
+
+  // ---------- EmailJS contact form ----------
+  const emailConfig = {
+    publicKey: 'YOUR_EMAILJS_PUBLIC_KEY',
+    serviceId: 'YOUR_EMAILJS_SERVICE_ID',
+    templateId: 'YOUR_EMAILJS_TEMPLATE_ID'
+  };
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  if(window.emailjs && !emailConfig.publicKey.startsWith('YOUR_')){
+    emailjs.init({ publicKey: emailConfig.publicKey });
+  }
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if(emailConfig.publicKey.startsWith('YOUR_')){
+      const data = new FormData(contactForm);
+      const subject = encodeURIComponent('Portfolio contact from ' + data.get('from_name'));
+      const body = encodeURIComponent(`${data.get('message')}\n\nFrom: ${data.get('from_name')} <${data.get('reply_to')}>`);
+      window.location.href = `mailto:akashkrsingh369@gmail.com?subject=${subject}&body=${body}`;
+      formStatus.textContent = 'Opening your email app. Add EmailJS keys for direct sending.';
+      return;
+    }
+    formStatus.textContent = 'Sending...';
+    try{
+      await emailjs.sendForm(emailConfig.serviceId, emailConfig.templateId, contactForm);
+      formStatus.textContent = 'Message sent. Thanks for reaching out.';
+      contactForm.reset();
+    }catch(error){
+      formStatus.textContent = 'Could not send right now. Please email me directly.';
+    }
+  });
+  // ---------- year ----------
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---------- skill grid ----------
+  const stack = [
+    { cat: 'Programming', items: [
+      { name:'Java', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+      { name:'Python', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+      { name:'JavaScript', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+    ]},
+    { cat: 'Frontend', items: [
+      { name:'React.js', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+      { name:'Next.js', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+      { name:'Tailwind CSS', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+    ]},
+    { cat: 'Backend', items: [
+      { name:'Node.js', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+      { name:'Express.js', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+      { name:'REST API', mono:'API' },
+      { name:'JWT', mono:'JWT' },
+    ]},
+    { cat: 'Database', items: [
+      { name:'MongoDB', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+      { name:'MySQL', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+    ]},
+    { cat: 'CS Fundamentals', items: [
+      { name:'DSA', mono:'DSA' },
+      { name:'OOP', mono:'OOP' },
+      { name:'DBMS', mono:'DB' },
+      { name:'OS', mono:'OS' },
+      { name:'CN', mono:'CN' },
+    ]},
+  ];
+  const grid = document.getElementById('stackGrid');
+  stack.forEach(group => {
+    const card = document.createElement('div');
+    card.className = 'card rounded-2xl p-6 reveal';
+    const iconsHtml = group.items.map(it => `
+      <div class="flex flex-col items-center gap-2 w-20 group">
+        <div class="skill-tile transition group-hover:-translate-y-1 group-hover:!border-teal-400">
+          ${ it.icon ? `<img src="${it.icon}" alt="${it.name}" loading="lazy">` : `<span class="font-mono font-bold text-xs" style="color:var(--teal)">${it.mono}</span>` }
+        </div>
+        <span class="text-[11px] text-center" style="color:var(--muted)">${it.name}</span>
+      </div>`).join('');
+    card.innerHTML = `<p class="eyebrow mb-5" style="margin-left:0">${group.cat}</p><div class="flex flex-wrap gap-5">${iconsHtml}</div>`;
+    grid.appendChild(card);
+    revealObserver.observe(card);
+  });
+
+  // ---------- canvas network background ----------
+  const canvas = document.getElementById('net');
+  const ctx = canvas.getContext('2d');
+  let W, H, nodes = [];
+  function resize(){
+    W = canvas.width = canvas.parentElement.offsetWidth;
+    H = canvas.height = canvas.parentElement.offsetHeight;
+  }
+  function initNodes(){
+    const count = Math.min(60, Math.floor((W*H)/22000));
+    nodes = Array.from({length: count}, () => ({
+      x: Math.random()*W, y: Math.random()*H,
+      vx: (Math.random()-0.5)*0.25, vy: (Math.random()-0.5)*0.25
+    }));
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    const isLight = document.documentElement.classList.contains('light');
+    ctx.strokeStyle = isLight ? 'rgba(14,158,142,0.18)' : 'rgba(45,212,191,0.18)';
+    ctx.fillStyle = isLight ? 'rgba(14,158,142,0.55)' : 'rgba(45,212,191,0.55)';
+    for(let i=0;i<nodes.length;i++){
+      const n = nodes[i];
+      n.x += n.vx; n.y += n.vy;
+      if(n.x < 0 || n.x > W) n.vx *= -1;
+      if(n.y < 0 || n.y > H) n.vy *= -1;
+      for(let j=i+1;j<nodes.length;j++){
+        const m = nodes[j];
+        const dx = n.x-m.x, dy = n.y-m.y, d = Math.sqrt(dx*dx+dy*dy);
+        if(d < 130){
+          ctx.globalAlpha = 1 - d/130;
+          ctx.beginPath(); ctx.moveTo(n.x,n.y); ctx.lineTo(m.x,m.y); ctx.stroke();
+        }
+      }
+    }
+    ctx.globalAlpha = 1;
+    nodes.forEach(n => { ctx.beginPath(); ctx.arc(n.x,n.y,2,0,Math.PI*2); ctx.fill(); });
+    if(!reduceMotion) requestAnimationFrame(draw);
+  }
+  resize(); initNodes(); draw();
+  window.addEventListener('resize', () => { resize(); initNodes(); });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
